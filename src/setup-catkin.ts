@@ -30,7 +30,7 @@ rosdep update --include-eol-distros`;
   child_process.execSync(command, {stdio: 'inherit'});
 }
 function rosdepInstall(workspace_root: string, version: string) {
-  let command = `. /opt/ros/${version}/setup.sh &&
+  let command = `./opt/ros/${version}/setup.sh &&
 cd ${workspace_root} &&
 rosdep install --from-paths --reinstall --ignore-packages-from-source --default-yes --verbose .`;
   child_process.execSync(command, {stdio: 'inherit'});
