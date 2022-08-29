@@ -53,7 +53,7 @@ function sourceWorkspace(
   build_tool: string
 ) {
   const init_workspace_command = makeInitCommand(build_tool);
-  const command = `. /opt/ros/${version}/setup.sh &&
+  const command = `./opt/ros/${version}/setup.sh &&
 cd ${workspace_root} &&
 if [ -f package.xml ]; then
   mkdir tmp-src;
